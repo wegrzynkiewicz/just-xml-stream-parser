@@ -1,0 +1,13 @@
+{
+  "name": "@wegrzynkiewicz/just-xml-stream-parser",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./mod.ts",
+    "./examples": "./examples/"
+  },
+  "imports": {
+    "@std/json": "jsr:@std/json",
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7"
+  }
+}

@@ -1,0 +1,24 @@
+<library>
+  <books>
+    <book id="1" author_id="1">
+      <title>Example Book 1</title>
+      <year>2021</year>
+      <malformed_url>https://example.com?p1=v1&p2=v2</malformed_url>
+      <url>https://example.com?p1=v1&amp;p2=v2</url>
+    </book>
+    <book id="2" author_id="2">
+      <title>Example Book 2</title>
+      <year>2022</year>
+      <malformed_url>https://example.com?p1=v1&p2=v2</malformed_url>
+      <url>https://example.com?p1=v1&amp;p2=v2</url>
+    </book>
+  </books>
+  <authors>
+    <author id="1">
+      <name>Author 1</name>
+    </author>
+    <author id="2">
+      <name>Author 2</name>
+    </author>
+  </authors>
+</library>
