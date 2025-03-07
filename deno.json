@@ -4,10 +4,10 @@
   "license": "MIT",
   "exports": {
     ".": "./mod.ts",
-    "./examples": "./examples/"
+    "./examples": "./examples/cli.ts"
   },
   "imports": {
-    "@std/json": "jsr:@std/json",
+    "@std/json": "jsr:@std/json@^1.0.1",
     "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7"
   }
 }

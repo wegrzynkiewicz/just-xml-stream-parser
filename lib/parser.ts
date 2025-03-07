@@ -14,8 +14,8 @@ export interface ParserElement {
 
 export class Parser implements XMLHandler {
   private root?: ParserElement;
-  public readonly emitElementsWhenClosed = new Set<string>();
-  public readonly emitElementsWhenEndOfAttributes = new Set<string>();
+  public readonly emitElementsWhenClosed: Set<string> = new Set<string>();
+  public readonly emitElementsWhenEndOfAttributes: Set<string> = new Set<string>();
   private readonly parents: ParserElement[] = [];
   private collectingChildrenOfElement?: ParserElement;
 
@@ -23,7 +23,7 @@ export class Parser implements XMLHandler {
   private element?: ParserElement;
 
   private controller!: ReadableStreamDefaultController<ParserElement>;
-  public readonly readable = new ReadableStream<ParserElement>({
+  public readonly readable: ReadableStream<ParserElement> = new ReadableStream<ParserElement>({
     start: (c) => this.controller = c,
   });
 

@@ -6,7 +6,7 @@ import { Parser } from "../lib/parser.ts";
 await new Command()
   .name("xml-parser")
   .description(
-    "CLI for parsing large XML files efficiently in a streaming fashion using Deno and outputting NDJSON",
+    "CLI for parsing large XML files efficiently in a streaming fashion and outputting NDJSON",
   )
   .arguments("<input:string> [output:string]")
   .option("-c, --collect <name:string>", "Tags to collect", {

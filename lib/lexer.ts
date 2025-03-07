@@ -46,7 +46,7 @@ export class Lexer {
   public column: number = 0;
   public depth: number = 0;
   public line: number = 0;
-  public readonly writable = new WritableStream<string>(this);
+  public readonly writable: WritableStream<string> = new WritableStream<string>(this);
 
   public flushMemo: () => string;
   public dump: (c: string) => void;
@@ -61,7 +61,7 @@ export class Lexer {
     this.dump = options.dump ? this.dumpChar : () => {};
   }
 
-  public write(chunk: string) {
+  public write(chunk: string): void {
     const len = chunk.length;
     for (let i = 0; i < len; i++) {
       const c = chunk[i];
@@ -75,7 +75,7 @@ export class Lexer {
     }
   }
 
-  public close() {
+  public close(): void {
     this.handler.endOfFile();
   }
 
@@ -86,7 +86,7 @@ export class Lexer {
     this.tagName = "";
   }
 
-  public startElement() {
+  public startElement(): void {
     const tag = this.memo.trim();
     this.tagName = tag;
     this.handler.startElement(tag);
